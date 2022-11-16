@@ -2,6 +2,7 @@
   "dependencies": {
     "sys_user": "sys-user:"
   },
+  "lockSchema": true,
   "schema": {
     "types": [
       {
