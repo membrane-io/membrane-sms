@@ -7,7 +7,7 @@
     "types": [
       {
         "name": "Root",
-        "description": "",
+        "description": "Send yourself text messages",
         "actions": [
           {
             "name": "configure",
@@ -85,4 +85,3 @@
     ]
   }
 }
-
