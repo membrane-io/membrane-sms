@@ -11,7 +11,7 @@
         "actions": [
           {
             "name": "configure",
-            "description": "Configure your phone number to receive text messages. This action must be invoked before trying to send messages.",
+            "description": "Configure your phone number to send and receive text messages.\nPrefix with '+' sign followed by country code.",
             "type": "Void",
             "params": [
               {
