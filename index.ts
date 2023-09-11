@@ -1,8 +1,8 @@
-import { root, nodes, state } from "membrane";
+import { root, nodes } from "membrane";
 const { sys_sms } = nodes;
 
 export const Root = {
-  configure: async ({ args }) => {
+  configure: async (args) => {
     if (!args.number || !args.number.length) {
       throw new Error("Missing phone number");
     }
@@ -13,12 +13,11 @@ export const Root = {
     return await sys_sms.configure({ number }).$invoke();
   },
 
-  handleSms: async ({ args: { message } }) => {
+  handleSms: async ({ message }) => {
     await root.received.$emit({ message });
   },
 
-  send: async ({ self, args }) => {
-    console.log("SENDING SMS", args.message);
+  send: async (args, { self }) => {
     const message = args.message;
     await sys_sms.send({ message }).$invoke();
   },
